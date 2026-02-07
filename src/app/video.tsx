@@ -86,8 +86,6 @@ const styles = StyleSheet.create({
 	},
 	backButton: {
 		alignSelf: "flex-start",
-		borderWidth: 1,
-		borderColor: "blue",
 	},
 	deleteButton: {
 		marginHorizontal: 10,

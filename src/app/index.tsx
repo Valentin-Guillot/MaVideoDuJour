@@ -27,8 +27,6 @@ export default function Home() {
 	}
 
 	async function handleDayPress(day: DateData) {
-		console.log("day", day);
-
 		if (await hasVideoForDate(new Date(day.dateString))) {
 			router.push(
 				`/video?videoUri=${videoMap[day.dateString]}&date=${day.dateString}`,
@@ -51,6 +49,7 @@ export default function Home() {
 				enableSwipeMonths
 				markedDates={markedDates}
 				showSixWeeks
+				firstDay={1}
 				style={styles.calendar}
 				maxDate={formatDate(new Date())}
 				displayLoadingIndicator={isPickingVideo}
